@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "androidgettingstarte",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authandroidgettingstarte9c2b4b02",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2023-01-25T23:34:55.752Z"
+}

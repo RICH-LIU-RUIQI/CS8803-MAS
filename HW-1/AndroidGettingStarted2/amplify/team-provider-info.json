@@ -17,6 +17,9 @@
       },
       "api": {
         "androidgettingstarte": {}
+      },
+      "storage": {
+        "s3a2f19b09": {}
       }
     }
   }

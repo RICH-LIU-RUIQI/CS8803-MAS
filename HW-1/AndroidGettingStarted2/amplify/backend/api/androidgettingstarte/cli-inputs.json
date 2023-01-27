@@ -8,6 +8,10 @@
       "cognitoUserPoolId": "authandroidgettingstarte9c2b4b02"
     },
     "additionalAuthTypes": [],
-    "conflictResolution": {}
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
   }
 }

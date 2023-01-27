@@ -9,7 +9,6 @@ import com.amplifyframework.AmplifyException
 import com.amplifyframework.api.aws.AWSApiPlugin
 import com.amplifyframework.api.graphql.model.ModelMutation
 import com.amplifyframework.api.graphql.model.ModelQuery
-import com.amplifyframework.auth.AuthCategory
 import com.amplifyframework.auth.AuthChannelEventName
 import com.amplifyframework.auth.AuthException
 import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin
@@ -18,9 +17,10 @@ import com.amplifyframework.auth.result.AuthSessionResult
 import com.amplifyframework.auth.result.AuthSignInResult
 import com.amplifyframework.core.Amplify
 import com.amplifyframework.core.InitializationStatus
-import com.amplifyframework.datastore.generated.model.NoteData
+import com.amplifyframework.datastore.generated.model.listNoteDatas
 import com.amplifyframework.hub.HubChannel
 import com.amplifyframework.hub.HubEvent
+import com.amplifyframework.storage.s3.AWSS3StoragePlugin
 
 object Backend {
 
@@ -64,6 +64,8 @@ object Backend {
         try {
             Amplify.addPlugin(AWSCognitoAuthPlugin())
             Amplify.addPlugin(AWSApiPlugin())
+            Amplify.addPlugin(AWSS3StoragePlugin())
+
             Amplify.configure(applicationContext)
             Log.i(TAG, "Initialized Amplify")
         } catch (e: AmplifyException) {
@@ -129,7 +131,7 @@ object Backend {
         Log.i(TAG, "Querying notes")
 
         Amplify.API.query(
-            ModelQuery.list(NoteData::class.java),
+            ModelQuery.list(listNoteDatas::class.java),
             { response ->
                 Log.i(TAG, "Queried")
                 response.data?.let {

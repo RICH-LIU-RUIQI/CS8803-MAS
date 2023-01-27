@@ -79,6 +79,10 @@ class MainActivity : AppCompatActivity() {
             // let's create a RecyclerViewAdapter that manages the individual cells
             recyclerView.adapter = NoteRecyclerViewAdapter(notes)
         })
+
+        // add a touch gesture handler to manager the swipe to delete gesture
+        val itemTouchHelper = ItemTouchHelper(SwipeCallback(this))
+        itemTouchHelper.attachToRecyclerView(recyclerView)
     }
 
     companion object {

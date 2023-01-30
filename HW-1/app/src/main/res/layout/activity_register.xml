@@ -31,7 +31,8 @@
         android:layout_below="@+id/password"
         android:layout_marginTop="99dp"
         android:rotationX="0"
-        android:text="@string/re_register" />
+        android:text="@string/re_register"
+        android:backgroundTint="@color/teal_700"/>
 
 
 </RelativeLayout>

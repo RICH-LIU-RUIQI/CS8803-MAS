@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_listview" />
+        app:layout_constraintTop_toBottomOf="@id/main_listview"
+        android:backgroundTint="@color/teal_700"/>
 
     <Button
         android:id="@+id/main_submit"
@@ -25,7 +26,8 @@
         app:layout_constraintBottom_toTopOf="@id/main_listview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_edit_name" />
+        app:layout_constraintTop_toBottomOf="@id/main_edit_name"
+        android:backgroundTint="@color/teal_700"/>
 
     <ListView
         android:id="@+id/main_listview"

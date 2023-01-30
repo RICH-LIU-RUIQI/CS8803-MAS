@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FirebaseDemo</string>
+    <string name="register">Register</string>
+    <string name="login">login</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="re_register">Register</string>
+    <string name="login_login">LOGIN</string>
+    <string name="main_logout">Logout</string>
+    <string name="main_submit">Submit</string>
+    <string name="main_edit_area">Area</string>
+</resources>
